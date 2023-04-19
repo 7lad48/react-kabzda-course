@@ -1,75 +1,35 @@
 import React from 'react';
-
+import Accordion from './components/Accordion/Accordion';
+import {Rating} from './components/Rating/Rating'; // we can rename component, for example {Rating as Stars (or any name)}
 import './App.css';
 
 export default function App() {
     console.log('App is rendering')
     return (
         <div className="App">
-            <Title/>
-            <Rating/>
-            <Accordion/>
-            <Rating/>
+            <Title value="This is app component"/>
+            <Title value="my asdjasd"/>
+            Article 1
+            <Rating value={3} />
+            <Accordion value="Title one" />
+            <Accordion value="Title Twooo" />
+            article 2
+            <Rating value={0} />
+            <Rating value={1} />
+            <Rating value={2} />
+            <Rating value={3} />
+            <Rating value={4} />
+            <Rating value={5} />
         </div>
     );
 }
 
-function Title() {
+function Title(props: any) {
     console.log('Title is renderinsg')
     return (
-        <>
-            Title: Hello
-        </>
+        <h2>
+            {props.value}
+        </h2>
     );
 }
 
-function Rating() {
-    console.log('Rating is rendering')
-    return (
-        <div>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-        </div>
-    );
-}
-
-function Star() {
-    console.log('Star is rendering')
-    return (
-        <div>star</div>
-    );
-}
-
-function Accordion() {
-    console.log('Accordion is rendering')
-    return (
-        <>
-            <AccordionTitle/>
-            <AccordionBody/>
-        </>
-
-    );
-}
-
-function AccordionTitle() {
-    console.log('AccordionTitle is rendering')
-    return (
-        <div>
-            Accordion
-        </div>
-    );
-}
-
-function AccordionBody() {
-    console.log('AccordionBody is rendering')
-    return (
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
-    );
-}
