@@ -8,9 +8,9 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+ // <React.StrictMode> -- дважды отрисовка из-за VM658 installHook.js ?
     <App />
-  </React.StrictMode>
+ // </React.StrictMode>
 );
 
 reportWebVitals();
