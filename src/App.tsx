@@ -15,7 +15,7 @@ export default function App() {
 }
 
 function Title() {
-    console.log('Title is rendering')
+    console.log('Title is renderinsg')
     return (
         <>
             Title: Hello
