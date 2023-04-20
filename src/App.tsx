@@ -7,12 +7,12 @@ export default function App() {
     console.log('App is rendering')
     return (
         <div className="App">
-            <Title value="This is app component"/>
-            <Title value="my asdjasd"/>
+            <Title title="This is app component"/>
+            <Title title="my asdjasd"/>
             Article 1
             <Rating value={3} />
-            <Accordion value="Title one" />
-            <Accordion value="Title Twooo" />
+            <Accordion titleValue="Title one" collapsed={false} />
+            <Accordion titleValue="Title Twooo" collapsed={true} />
             article 2
             <Rating value={0} />
             <Rating value={1} />
@@ -23,12 +23,14 @@ export default function App() {
         </div>
     );
 }
-
-function Title(props: any) {
+type TitlePropsType = {
+    title: string
+}
+function Title(props: TitlePropsType) {
     console.log('Title is renderinsg')
     return (
         <h2>
-            {props.value}
+            {props.title}
         </h2>
     );
 }
