@@ -11,8 +11,8 @@ export default function App() {
             <Title title="my asdjasd"/>
             Article 1
             <Rating value={3} />
-            <Accordion titleValue="Title one" collapsed={false} />
-            <Accordion titleValue="Title Twooo" collapsed={true} />
+            <Accordion titleValue="Title num one" collapsed={false} />
+            <Accordion titleValue="Title number Two" collapsed={true} />
             article 2
             <Rating value={0} />
             <Rating value={1} />
