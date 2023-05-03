@@ -2,9 +2,12 @@ import React from 'react';
 import Accordion from './components/Accordion/Accordion';
 import {Rating} from './components/Rating/Rating'; // we can rename component, for example {Rating as Stars (or any name)}
 import './App.css';
+import OnOff from "./components/OnOff/OnOff";
+
 
 export default function App() {
     console.log('App is rendering')
+    const [isOn, setIsOn] = React.useState<boolean>(true);
     return (
         <div className="App">
             {/*<Title title="This is app component"/>*/}
@@ -19,7 +22,7 @@ export default function App() {
             <Rating value={3} />
             <Rating value={4} />
             <Rating value={5} />
-
+            <OnOff isOn={isOn} setIsOn={(state) => setIsOn(state)}/>
         </div>
     );
 }
