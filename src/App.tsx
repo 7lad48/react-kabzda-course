@@ -13,13 +13,13 @@ export default function App() {
             {/*<Rating value={3} />*/}
             <Accordion titleValue="Title num one" collapsed={false} />
             <Accordion titleValue="Title number Two" collapsed={false} />
-            {/*article 2*/}
-            {/*<Rating value={0} />*/}
-            {/*<Rating value={1} />*/}
-            {/*<Rating value={2} />*/}
-            {/*<Rating value={3} />*/}
-            {/*<Rating value={4} />*/}
-            {/*<Rating value={5} />*/}
+            <Rating value={0} />
+            <Rating value={1} />
+            <Rating value={2} />
+            <Rating value={3} />
+            <Rating value={4} />
+            <Rating value={5} />
+
         </div>
     );
 }
