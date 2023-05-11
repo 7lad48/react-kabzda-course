@@ -3,11 +3,13 @@ import Accordion from './components/Accordion/Accordion';
 import {Rating} from './components/Rating/Rating'; // we can rename component, for example {Rating as Stars (or any name)}
 import './App.css';
 import OnOff from "./components/OnOff/OnOff";
+import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 
 
 export default function App() {
     console.log('App is rendering')
-    const [isOn, setIsOn] = React.useState<boolean>(true);
+
     return (
         <div className="App">
             {/*<Title title="This is app component"/>*/}
@@ -16,13 +18,11 @@ export default function App() {
             {/*<Rating value={3} />*/}
             <Accordion titleValue="Title num one" collapsed={false} />
             <Accordion titleValue="Title number Two" collapsed={false} />
-            <Rating value={0} />
-            <Rating value={1} />
-            <Rating value={2} />
-            <Rating value={3} />
-            <Rating value={4} />
-            <Rating value={5} />
-            <OnOff isOn={isOn} setIsOn={(state) => setIsOn(state)}/>
+            <OnOff />
+            <UncontrolledAccordion titleValue={'Test useState'}/>
+            <UncontrolledAccordion titleValue={'Test useState2'}/>
+            <UncontrolledAccordion titleValue={'Test useState3'}/>
+            <UncontrolledRating />
         </div>
     );
 }

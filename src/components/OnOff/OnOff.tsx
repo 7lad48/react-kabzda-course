@@ -1,17 +1,19 @@
 import React from 'react';
 import styles from './OnOff.module.css'
 
-export type OnOffType = {
-    isOn: boolean
-    setIsOn: (state:boolean)=>void
-}
+// export type OnOffType = {
+//     isOn: boolean
+//     setIsOn: ()=>void
+// }
 
-function OnOff (props: OnOffType) {
+function OnOff () {
+    const [isOn, setIsOn] = React.useState<boolean>(true);
+    console.log('onOff rendering')
     return (
         <div className={styles.wrapper}>
-            <button onClick={() => props.setIsOn(true)} className={`${styles.btn} ${props.isOn && styles.active}`}>On</button>
-            <button onClick={() => props.setIsOn(false)} className={`${styles.btn} ${!props.isOn && styles.inactive}`}>Off</button>
-            <span className={`${styles.indicator} ${props.isOn ? styles.active : styles.inactive}`}></span>
+            <button onClick={() => !isOn && setIsOn(!isOn)} className={`${isOn ? `${styles.active} ${styles.btn}` : styles.btn}`}>On</button>
+            <button onClick={() => isOn && setIsOn(!isOn)} className={`${!isOn ? `${styles.inactive} ${styles.btn}` : styles.btn}`}>Off</button>
+            <span className={`${styles.indicator} ${isOn ? styles.active : styles.inactive}`}></span>
         </div>
     );
 }
