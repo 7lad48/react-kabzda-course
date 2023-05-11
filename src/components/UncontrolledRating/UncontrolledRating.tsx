@@ -31,7 +31,7 @@ function Star(props: StarPropsType) {
     console.log('Star is rendering')
     const StarChecked = {
         fontSize: '33px',
-        cursor: 'default',
+        cursor: 'pointer',
         color: 'orange',
     }
     const Star = {
@@ -39,10 +39,6 @@ function Star(props: StarPropsType) {
         cursor: 'pointer',
 
     }
-    if(props.selected === true){
-        return <span style={StarChecked}>✩ </span>
-    } else {
-        return <span onClick={props.starHandler} style={Star}>✩ </span>
-    }
+    return <span onClick={props.starHandler} style={props.selected ? StarChecked : Star}>✩ </span>
     
 }
