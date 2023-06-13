@@ -10,7 +10,6 @@ export function UncontrolledRating() {
         alignItems: 'center',
         gap: '8px',
         marginLeft: '15px',
-        height: '20px',
     }
     //const starHandler = ()=>
         return  <div style={StarsContainer}>
@@ -37,7 +36,7 @@ function Star(props: StarPropsType) {
     const Star = {
         fontSize: '33px',
         cursor: 'pointer',
-
+        color: 'lightgray'
     }
     return <span onClick={props.starHandler} style={props.selected ? StarChecked : Star}>✩ </span>
     

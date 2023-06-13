@@ -23,6 +23,7 @@ export default function App() {
             <UncontrolledAccordion titleValue={'Test useState2'}/>
             <UncontrolledAccordion titleValue={'Test useState3'}/>
             <UncontrolledRating />
+            <UncontrolledRating />
         </div>
     );
 }
